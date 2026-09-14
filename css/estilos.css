@@ -1,180 +1,783 @@
-/* --- ESTILOS GENERALES Y RESET --- */
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+   ========================================== */
+
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-color: #f3f6f8;
+    color: #263238;
+
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    line-height: 1.6;
-    color: #333333;
-    background-color: #f4f7f6;
+    line-height: 1.7;
 }
 
-/* Contenedor fluido tradicional */
-.container {
-    width: 90%;
+
+/* ==========================================
+   CONTENEDOR
+   ========================================== */
+
+.contenedor {
+    width: 92%;
     max-width: 1100px;
-    margin: 0 auto;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* --- CABECERA Y NAVEGACIÓN (Sin Flexbox/Grid) --- */
-.site-header {
-    background-color: #1a252f;
-    color: #ffffff;
-    padding: 15px 0;
-    border-bottom: 4px solid #1abc9c;
-}
 
-.logo {
-    font-size: 22px;
-    float: left;
-    line-height: 40px;
-}
+/* ==========================================
+   ENLACES
+   ========================================== */
 
-.site-nav {
-    float: right;
-}
-
-.site-nav ul {
-    list-style: none;
-}
-
-.site-nav li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.site-nav a {
-    color: #ffffff;
+a {
+    color: #1769aa;
     text-decoration: none;
-    line-height: 40px;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+header {
+    background-color: #102a43;
+    color: #ffffff;
+
+    padding-top: 55px;
+}
+
+.encabezado {
+    padding-bottom: 45px;
+}
+
+.etiqueta {
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    color: #8fc4e8;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+header h1 {
+    max-width: 850px;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    font-size: 48px;
+    line-height: 1.15;
+}
+
+.subtitulo {
+    max-width: 800px;
+
+    margin: 0;
+
+    color: #d9e7f0;
+
+    font-size: 20px;
+}
+
+
+/* ==========================================
+   NAVEGACIÓN
+   ========================================== */
+
+nav {
+    border-top: 1px solid #36536b;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+
+    padding: 15px 18px;
+
+    color: #ffffff;
+
     font-weight: bold;
 }
 
-.site-nav a:hover {
-    color: #1abc9c;
+nav a:hover,
+nav a:focus {
+    background-color: #1c405c;
+
+    text-decoration: none;
 }
 
-/* Limpieza de floats del header */
-.site-header .container::after {
+
+/* ==========================================
+   SECCIONES
+   ========================================== */
+
+section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    color: #102a43;
+
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.etiqueta-seccion {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    color: #2875a8;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.descripcion-seccion {
+    max-width: 750px;
+
+    margin-bottom: 35px;
+
+    color: #52606d;
+}
+
+
+/* ==========================================
+   INTRODUCCIÓN
+   ========================================== */
+
+.introduccion {
+    background-color: #ffffff;
+}
+
+.introduccion article {
+    max-width: 850px;
+}
+
+.introduccion article p:not(.etiqueta-seccion) {
+    color: #364152;
+}
+
+
+/* ==========================================
+   DATOS DESTACADOS
+   ========================================== */
+
+.destacados {
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+    background-color: #102a43;
+
+    text-align: center;
+}
+
+.dato-destacado {
+    display: inline-block;
+
+    width: 30%;
+
+    margin: 1%;
+
+    padding: 25px 15px;
+
+    vertical-align: top;
+
+    border: 1px solid #41647d;
+}
+
+.dato-destacado strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 32px;
+}
+
+.dato-destacado span {
+    display: block;
+
+    color: #cbdbe6;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   SIETE IDEAS
+   ========================================== */
+
+.ideas {
+    background-color: #edf2f5;
+}
+
+.idea {
+    margin-top: 35px;
+    padding: 35px;
+
+    background-color: #ffffff;
+
+    border-left: 5px solid #2875a8;
+
+    box-shadow: 0 5px 18px rgba(16, 42, 67, 0.08);
+}
+
+
+/* ==========================================
+   NÚMERO
+   ========================================== */
+
+.numero {
+    float: left;
+
+    width: 65px;
+    height: 65px;
+
+    margin-right: 25px;
+
+    background-color: #102a43;
+    color: #ffffff;
+
+    text-align: center;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    line-height: 65px;
+}
+
+
+/* ==========================================
+   CONTENIDO
+   ========================================== */
+
+.contenido {
+    margin-left: 90px;
+}
+
+.contenido h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: #102a43;
+
+    font-size: 24px;
+    line-height: 1.35;
+}
+
+.contenido h4 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+    color: #24648e;
+
+    font-size: 18px;
+}
+
+.contenido p {
+    color: #364152;
+}
+
+.contenido ol {
+    padding-left: 25px;
+}
+
+.contenido ol li {
+    margin-bottom: 12px;
+}
+
+
+/* ==========================================
+   DATO DE LOS CUATRO NUEVES
+   ========================================== */
+
+.dato {
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    padding: 20px;
+
+    background-color: #e5f0f7;
+
+    border-left: 4px solid #2875a8;
+}
+
+.dato-numero {
+    display: block;
+
+    color: #102a43;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.dato p {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   PILARES
+   ========================================== */
+
+.pilares {
+    margin: 20px 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.pilares li {
+    display: inline-block;
+
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    padding: 8px 16px;
+
+    background-color: #102a43;
+    color: #ffffff;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   CLEARFIX
+   ========================================== */
+
+.clearfix::after {
     content: "";
+
     display: table;
+
     clear: both;
 }
 
-/* --- SECCIONES PRINCIPALES --- */
-.hero-section {
-    background-color: #2c3e50;
-    color: #ffffff;
-    padding: 50px 0;
-    text-align: center;
-}
 
-.hero-section h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
+/* ==========================================
+   GALERÍA
+   ========================================== */
 
-.content-section {
-    padding: 40px 0;
+.galeria {
     background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
 }
 
-.bg-alt {
-    background-color: #ecf0f1;
+.galeria-contenido {
+    margin-left: -10px;
+    margin-right: -10px;
 }
 
-.content-section h2 {
-    font-size: 26px;
-    color: #2c3e50;
-    margin-bottom: 20px;
+.imagen {
+    float: left;
+
+    width: 31.33%;
+
+    margin: 10px;
+
+    padding: 0;
+
+    background-color: #f5f7f9;
+
+    border: 1px solid #d9e2ec;
 }
 
-.content-section p {
-    margin-bottom: 15px;
+.imagen img {
+    display: block;
+
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
 }
 
-/* --- ELEMENTOS FLOTADOS Y MULTIMEDIA --- */
-.float-figure {
-    float: right;
-    width: 35%;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    text-align: center;
-    font-size: 14px;
-    color: #666;
+.imagen figcaption {
+    padding: 14px;
+
+    color: #364152;
+
+    font-size: 15px;
+    font-weight: bold;
 }
 
-.float-figure img {
+
+/* ==========================================
+   VIDEO LOCAL
+   ========================================== */
+
+.video {
+    background-color: #edf2f5;
+}
+
+.video-contenedor {
+    width: 100%;
+    max-width: 900px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 0;
+}
+
+.video-contenedor video {
+    display: block;
+
     width: 100%;
     height: auto;
-    border-radius: 4px;
+
+    background-color: #102a43;
 }
 
-/* Galería Adaptable con inline-block y porcentajes (Sin Flex/Grid) */
-.gallery {
-    font-size: 0; /* Elimina espacios en blanco de inline-block */
-    margin-right: -2%; /* Compensación de margen */
-}
+.video-contenedor figcaption {
+    padding-top: 12px;
 
-.gallery-item {
-    display: inline-block;
-    width: 31.3%;
-    margin-right: 2%;
-    margin-bottom: 20px;
-    font-size: 16px; /* Restaura tamaño de fuente */
-    vertical-align: top;
-    background: #ffffff;
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 4px;
-}
+    color: #52606d;
 
-.gallery-item img {
-    width: 100%;
-    height: auto;
-}
-
-.gallery-item figcaption {
-    font-size: 14px;
     text-align: center;
-    margin-top: 8px;
-    color: #555;
 }
 
-/* Contenedor de Video Adaptable */
-.video-title {
-    margin-top: 30px;
-    margin-bottom: 15px;
+
+/* ==========================================
+   PODCAST YOUTUBE
+   ========================================== */
+
+.podcast {
+    background-color: #ffffff;
 }
 
-.video-container {
-    position: relative;
+.youtube-contenedor {
     width: 100%;
-    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-    height: 0;
-    background: #000;
+    max-width: 900px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 0;
 }
 
-.video-container iframe,
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
+.youtube-contenedor iframe {
+    display: block;
+
     width: 100%;
-    height: 100%;
+    height: 505px;
+
     border: 0;
 }
 
-/* --- PIE DE PÁGINA --- */
-.site-footer {
-    background-color: #1a252f;
-    color: #ffffff;
+.youtube-contenedor figcaption {
+    padding-top: 12px;
+
+    color: #52606d;
+
     text-align: center;
-    padding: 25px 0;
-    font-size: 14px;
+}
+
+.youtube-enlace {
+    text-align: center;
+}
+
+.youtube-enlace a {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 12px 20px;
+
+    background-color: #102a43;
+    color: #ffffff;
+
+    font-weight: bold;
+}
+
+.youtube-enlace a:hover,
+.youtube-enlace a:focus {
+    background-color: #2875a8;
+
+    text-decoration: none;
+}
+
+
+/* ==========================================
+   ÉTICA
+   ========================================== */
+
+.etica {
+    background-color: #edf2f5;
+}
+
+.etica article {
+    max-width: 850px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frase-final {
+    margin-top: 35px;
+    padding: 25px;
+
+    background-color: #102a43;
+
+    text-align: center;
+}
+
+.frase-final span {
+    display: inline-block;
+
+    margin: 5px 15px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    background-color: #102a43;
+    color: #d9e7f0;
+
+    text-align: center;
+}
+
+footer h2 {
+    margin-top: 0;
+
+    color: #ffffff;
+
+    font-size: 22px;
+}
+
+footer p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+footer a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #ffffff;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   TABLETS
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    .imagen {
+        width: 46%;
+    }
+
+    .youtube-contenedor iframe {
+        height: 430px;
+    }
+
+}
+
+
+/* ==========================================
+   TELÉFONOS
+   ========================================== */
+
+@media (max-width: 650px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .contenedor {
+        width: 90%;
+    }
+
+    header {
+        padding-top: 35px;
+    }
+
+    .encabezado {
+        padding-bottom: 30px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .subtitulo {
+        font-size: 17px;
+    }
+
+
+    /* Navegación */
+
+    nav li {
+        display: block;
+    }
+
+    nav a {
+        border-bottom: 1px solid #36536b;
+    }
+
+
+    /* Secciones */
+
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    section h2 {
+        font-size: 29px;
+    }
+
+
+    /* Datos */
+
+    .dato-destacado {
+        display: block;
+
+        width: 100%;
+
+        margin: 10px 0;
+    }
+
+
+    /* Ideas */
+
+    .idea {
+        padding: 22px;
+    }
+
+    .numero {
+        float: none;
+
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .contenido {
+        margin-left: 0;
+    }
+
+    .contenido h3 {
+        font-size: 21px;
+    }
+
+
+    /* Galería */
+
+    .imagen {
+        float: none;
+
+        width: 100%;
+
+        margin: 15px 0;
+    }
+
+    .imagen img {
+        height: auto;
+    }
+
+
+    /* Pilares */
+
+    .pilares li {
+        display: block;
+
+        margin-right: 0;
+    }
+
+
+    /* Video de YouTube */
+
+    .youtube-contenedor iframe {
+        height: 230px;
+    }
+
+
+    /* Frase */
+
+    .frase-final span {
+        display: block;
+
+        margin: 10px 0;
+    }
+
+}
+
+
+/* ==========================================
+   PANTALLAS MUY PEQUEÑAS
+   ========================================== */
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    .idea {
+        padding: 18px;
+    }
+
+    .youtube-contenedor iframe {
+        height: 210px;
+    }
+
 }
