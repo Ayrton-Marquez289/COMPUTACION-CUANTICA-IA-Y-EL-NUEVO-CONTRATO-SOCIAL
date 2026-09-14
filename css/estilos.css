@@ -1,0 +1,180 @@
+/* --- ESTILOS GENERALES Y RESET --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f7f6;
+}
+
+/* Contenedor fluido tradicional */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- CABECERA Y NAVEGACIÓN (Sin Flexbox/Grid) --- */
+.site-header {
+    background-color: #1a252f;
+    color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 4px solid #1abc9c;
+}
+
+.logo {
+    font-size: 22px;
+    float: left;
+    line-height: 40px;
+}
+
+.site-nav {
+    float: right;
+}
+
+.site-nav ul {
+    list-style: none;
+}
+
+.site-nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.site-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.site-nav a:hover {
+    color: #1abc9c;
+}
+
+/* Limpieza de floats del header */
+.site-header .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- SECCIONES PRINCIPALES --- */
+.hero-section {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.content-section {
+    padding: 40px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.bg-alt {
+    background-color: #ecf0f1;
+}
+
+.content-section h2 {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    margin-bottom: 15px;
+}
+
+/* --- ELEMENTOS FLOTADOS Y MULTIMEDIA --- */
+.float-figure {
+    float: right;
+    width: 35%;
+    margin-left: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.float-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Galería Adaptable con inline-block y porcentajes (Sin Flex/Grid) */
+.gallery {
+    font-size: 0; /* Elimina espacios en blanco de inline-block */
+    margin-right: -2%; /* Compensación de margen */
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 31.3%;
+    margin-right: 2%;
+    margin-bottom: 20px;
+    font-size: 16px; /* Restaura tamaño de fuente */
+    vertical-align: top;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-item figcaption {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 8px;
+    color: #555;
+}
+
+/* Contenedor de Video Adaptable */
+.video-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    background: #000;
+}
+
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- PIE DE PÁGINA --- */
+.site-footer {
+    background-color: #1a252f;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 14px;
+}
